@@ -1,0 +1,14 @@
+{
+  "name": "stepper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node step.js"
+  },
+  "dependencies": {
+    "stepper-wiringpi": "0.0.2",
+    "wiringpi-node": "^2.4.4",
+    "wpi-stepper": "^0.1.5"
+  }
+}
