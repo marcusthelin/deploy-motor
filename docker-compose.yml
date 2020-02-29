@@ -5,5 +5,9 @@ services:
         build: ./services/motor
         devices:
             - /dev/gpiomem:/dev/gpiomem
+    deploy-machine-frontend:
+        build: ./services/frontend
+        environment:
+            - MOTOR_HOST=deploy-machine
         ports:
             - 80:80

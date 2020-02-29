@@ -5,5 +5,9 @@ services:
         image: marcusthelin/deploy-machine
         devices:
             - /dev/gpiomem:/dev/gpiomem
+    deploy-machine-frontend:
+        image: marcusthelin/deploy-machine-frontend
+        environment:
+            - MOTOR_HOST=deploy-machine
         ports:
             - 80:80
