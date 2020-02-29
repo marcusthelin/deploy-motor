@@ -24,8 +24,14 @@ app.get('/stop', async (req, res) => {
 })
 
 app.get('/deploy', async (req, res) => {
-    await deploy()
-    res.send('Deployed!')
+    if (req.query.awaitCompletion === 'true') {
+        // Able to await the motor movement before responding.
+        await deploy()
+    } else {
+        deploy()
+    }
+
+    res.send('Deploy movement done')
 })
 
 app.listen(80, () => {
