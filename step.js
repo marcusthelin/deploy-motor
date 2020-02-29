@@ -9,7 +9,6 @@ const pins = [4, 17, 27, 22]
 
 const motor = new Stepper({ pins, steps: stepsPerRev, mode: MODES.SINGLE });
 
-motor.maxRPM = 8
 motor.speed = 8; // 20 RPM
 const FULL_TURN = motor.steps / 2
 

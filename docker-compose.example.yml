@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+    deploy-machine:
+        image: marcusthelin/deploy-machine
+        devices:
+            - /dev/gpiomem:/dev/gpiomem
+        ports:
+            - 80:80

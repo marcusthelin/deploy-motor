@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+    deploy-machine:
+        build: ./
+        devices:
+            - /dev/gpiomem:/dev/gpiomem
+        ports:
+            - 80:80
