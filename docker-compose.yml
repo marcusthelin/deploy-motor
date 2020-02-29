@@ -2,7 +2,7 @@ version: '3'
 
 services:
     deploy-machine:
-        build: ./
+        build: ./services/motor
         devices:
             - /dev/gpiomem:/dev/gpiomem
         ports:
